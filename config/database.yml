@@ -1,0 +1,13 @@
+development:
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  socket: /var/run/mysqld/mysqld.sock
+  database: wego
+  password: 123456789
+  host: 127.0.0.1
+production:
+  adapter: postgresql
+  encoding: unicode
+  url: <%= ENV['DATABASE_URL'] %>
